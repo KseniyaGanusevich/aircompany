@@ -78,6 +78,6 @@ public class AirportTest {
         List<ExperimentalPlane> ExperimentalPlanes = airport.getExperimentalPlanes();
         boolean hasUnclassifiedPlanes = ExperimentalPlanes.stream()
                 .anyMatch(experimentalPlane -> experimentalPlane.getClassificationLevel() == ClassificationLevel.UNCLASSIFIED);
-        Assert.assertTrue(hasUnclassifiedPlanes);
+        Assert.assertFalse(hasUnclassifiedPlanes);
     }
 }
